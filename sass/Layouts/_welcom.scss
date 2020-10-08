@@ -1,0 +1,120 @@
+.welcome {
+  width: 100%;
+  margin: 0 auto;
+
+  padding-top: 140px;
+  &__container {
+    margin: 0 auto;
+
+    max-width: 1152px;
+    width: 1152px;
+    &__title {
+      text-align: center;
+
+      h1 {
+        @include styleText($color-black-6, $fs-2 * 2, $fw-2);
+      }
+      h2 {
+        @include styleText(rgba(54, 54, 54, 0.9), 1.25rem, $fw-4);
+      }
+    }
+    &__content {
+      width: 80%;
+
+      .welcome__left {
+        width: 70%;
+        &__card {
+          margin-top: 40px;
+          background-color: $color-white-0;
+          border-radius: 10px;
+
+          box-shadow: 1px 1px 3px 1px $color-green-0;
+          .img_welcome__title {
+            width: 97%;
+            margin: 0 auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translateY(-5%);
+            transition: all 0.3s;
+          }
+          .card__content {
+            padding: 10px 20px;
+            .content--title {
+              a {
+                text-decoration: none;
+                @include styleText($color-black-6, 23.25px, $fw-1);
+              }
+            }
+            .content--text {
+              @include styleText($color-black-6, $fs-2 + 1, $fw-1);
+            }
+          }
+          .card__readmore {
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .card__user {
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              .ava_user {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                padding-right: 5px;
+              }
+              .name_user {
+                a {
+                  text-decoration: none;
+                  @include styleText($color-black-3, $fs-2, $fw-normal);
+                }
+              }
+            }
+          }
+          &:hover {
+            .img_welcome__title {
+              transform: translateY(-10%);
+            }
+          }
+        }
+      }
+      .welcome__right {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@include responsive("extra-large") {
+  .welcome {
+    &__container {
+      max-width: 960px;
+      width: 960px;
+    }
+  }
+}
+@include responsive("large") {
+  .welcome {
+    &__container {
+      width: 100%;
+      margin: 0 auto;
+
+      &__content {
+        width: 95%;
+        margin: 0 auto;
+        .welcome__left {
+          width: 100%;
+          margin: 0 auto;
+        }
+        .welcome__right {
+          display: none;
+        }
+      }
+    }
+  }
+}

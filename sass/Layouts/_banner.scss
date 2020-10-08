@@ -1,0 +1,51 @@
+.banner {
+  max-width: 100%;
+
+  background-color: $color-blue-3;
+
+  margin-top: 100px;
+
+  .banner__content {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .banner__left {
+      width: 50%;
+      max-width: 60%;
+      text-align: right;
+      h1 {
+        @include styleText($color-white-0, 32px, $fw-5);
+      }
+      p {
+        @include styleText($color-white-0, 24px, $fw-normal);
+      }
+    }
+    .banner__right {
+      max-width: 40%;
+      img {
+        width: 100%;
+        display: block;
+
+        margin-right: 100px;
+      }
+    }
+  }
+}
+
+@include responsive("mid-medium") {
+  .banner {
+    .banner__content {
+      flex-direction: column;
+      .banner__left {
+        max-width: 100%;
+      }
+      .banner__right {
+        max-width: 80%;
+        img {
+          padding-right: 40px;
+        }
+      }
+    }
+  }
+}

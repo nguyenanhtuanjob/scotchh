@@ -1,0 +1,66 @@
+.menu {
+  top: 60px;
+  width: 100%;
+  margin: 0 auto;
+
+  background-color: $color-black-13;
+
+  position: fixed;
+  z-index: 90;
+
+  .menu__content {
+    width: 80%;
+    margin: 0 auto;
+
+    nav {
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-align: center;
+
+      .menu__item {
+        @include styleText($color-white-0, $fs-1 + 1, $fw-5);
+        transition: all 0.5s;
+        &:hover {
+          color: $color-white-0;
+        }
+
+        padding: 12px 25px;
+        white-space: nowrap;
+      }
+      .color-react {
+        color: $color-menu-0;
+      }
+      .color-vue {
+        color: $color-menu-1;
+      }
+      .color-angular {
+        color: $color-menu-2;
+      }
+      .color-javascript {
+        color: $color-menu-3;
+      }
+      .color-node {
+        color: $color-menu-4;
+      }
+      .color-lavarel {
+        color: $color-menu-5;
+      }
+      .color-css {
+        color: $color-menu-6;
+      }
+      .color-vs-code {
+        color: $color-menu-7;
+      }
+      .color-python {
+        color: $color-menu-8;
+      }
+    }
+  }
+}
+@include responsive("large") {
+  .menu {
+    display: none;
+  }
+}

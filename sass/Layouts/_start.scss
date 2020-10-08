@@ -1,0 +1,107 @@
+.start {
+  padding: 40px 0;
+  margin: 0 auto;
+  width: 100%;
+  &__content {
+    background-color: $color-blue-4;
+
+    margin: 0px auto;
+    border-radius: 5px;
+    padding: 40px 0;
+
+    max-width: 1152px;
+    width: 1152px;
+    .start__title {
+      padding: 20px 0;
+      margin: 0 auto;
+      h1 {
+        padding-top: 40px;
+        text-align: center;
+        @include styleText($color-black-5, 24px, $fw-5);
+      }
+    }
+    .start__course {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      &__item {
+        cursor: pointer;
+
+        margin: 0 auto;
+        background-color: white;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: all 0.5s;
+        .item__left {
+          position: relative;
+          background-color: $color-blue-5;
+          width: 50px;
+          height: 100px;
+          top: 50%;
+          right: 0;
+          .left__icon {
+            position: absolute;
+            top: 50%;
+            right: -50%;
+            transform: translateY(-50%);
+            background-color: black;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            .fab {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              color: aqua;
+              font-size: 24px;
+            }
+          }
+        }
+        .item__right {
+          background-color: $color-white-0;
+          margin-right: 50px;
+          .course__title {
+            @include styleText($color-gray-1, 16px, $fw-5);
+            padding: 15px 15px 15px 50px;
+          }
+        }
+        &:hover {
+          transform: translateY(-10%);
+        }
+      }
+    }
+  }
+}
+
+@include responsive("extra-large") {
+  .start {
+    &__content {
+      max-width: 960px;
+      width: 960px;
+    }
+  }
+}
+@include responsive("large") {
+  .start {
+    &__content {
+      width: 100%;
+      .start__title {
+        h1 {
+          padding-top: 0;
+        }
+      }
+      .start__course {
+        flex-direction: column;
+        align-items: space-between;
+        justify-content: center;
+        &__item {
+          margin: 10px 0;
+          width: 90%;
+        }
+      }
+    }
+  }
+}

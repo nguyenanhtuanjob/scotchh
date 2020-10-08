@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <title>Document</title> -->
+    <title>Coding Challenges ― Scotch.io</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+    <!-- font -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="navbar-brand">
+          <div class="navbar-brand__content" id="navbar-brand__content">
+            <a class="navbar-logo" href="/index.html">
+              <div class="scotch-container">
+                <div class="scotch-logo">
+                  <svg
+                    class="scotch-logo__liquid"
+                    viewBox="0 0 30 48"
+                    style="max-width: 80px"
+                  >
+                    <defs>
+                      <clipPath id="clip-path--glass">
+                        <path
+                          class="liquid__path-container"
+                          d="M 8.6 1.5 c 0 13.33 -4.17 20 -3.75 23.33 a 9.17 8.33 0 0 0 20.83 0 c 0.42 -3.33 -3.75 -10 -3.75 -23.33 Z"
+                        ></path>
+                      </clipPath>
+                      <clipPath id="clip-path--liquid">
+                        <path
+                          class="liquid__path liquid__path--top-clip"
+                          d="M -80 22 C -75.08 16 -69.08 16 -64.17 22 S -53.25 28 -48.33 22 S -37.42 16 -32.5 22 S -21.58 28 -16.67 22 S -5.75 16 -0.83 22 S 10.08 28 15 22 S 25.92 16 30.83 22 S 41.75 28 46.67 22 S 57.58 16 62.5 22 S 73.42 28 78.33 22 S 89.25 16 94.17 22 S 105.08 28 110 22 l 0 30 l -190 0"
+                        ></path>
+                      </clipPath>
+                    </defs>
+                    <g clip-path="url(#clip-path--glass)">
+                      <circle
+                        class="liquid__drop liquid__drop--top liquid__drop--1"
+                        cx="18.3"
+                        cy="3.3"
+                        r="1.5"
+                      ></circle>
+                      <circle
+                        class="liquid__drop liquid__drop--bottom liquid__drop--2"
+                        cx="12"
+                        cy="5"
+                        r="1.5"
+                      ></circle>
+                      <path
+                        class="liquid__path liquid__path--top"
+                        d="M -80 22 C -75.08 16 -69.08 16 -64.17 22 S -53.25 28 -48.33 22 S -37.42 16 -32.5 22 S -21.58 28 -16.67 22 S -5.75 16 -0.83 22 S 10.08 28 15 22 S 25.92 16 30.83 22 S 41.75 28 46.67 22 S 57.58 16 62.5 22 S 73.42 28 78.33 22 S 89.25 16 94.17 22 S 105.08 28 110 22 l 0 30 l -190 0"
+                      ></path>
+                      <path
+                        class="liquid__path liquid__path--bottom"
+                        d="M -70 24.5 C -65.92 18.5 -59.92 18.5 -55.83 24.5 S -45.75 30.5 -41.67 24.5 S -31.58 18.5 -27.5 24.5 S -17.42 30.5 -13.33 24.5 S -3.25 18.5 0.83 24.5 S 10.92 30.5 15 24.5 S 25.08 18.5 29.17 24.5 S 39.25 30.5 43.33 24.5 S 53.42 18.5 57.5 24.5 S 67.58 30.5 71.67 24.5 S 81.75 18.5 85.83 24.5 S 95.92 30.5 100 24.5 l 0 30 l -170 0"
+                      ></path>
+                      <g
+                        class="liquid__path--clip-container"
+                        clip-path="url(#clip-path--liquid)"
+                      >
+                        <path
+                          class="liquid__path liquid__path--bottom-clip"
+                          d="M -70 24.5 C -65.92 18.5 -59.92 18.5 -55.83 24.5 S -45.75 30.5 -41.67 24.5 S -31.58 18.5 -27.5 24.5 S -17.42 30.5 -13.33 24.5 S -3.25 18.5 0.83 24.5 S 10.92 30.5 15 24.5 S 25.08 18.5 29.17 24.5 S 39.25 30.5 43.33 24.5 S 53.42 18.5 57.5 24.5 S 67.58 30.5 71.67 24.5 S 81.75 18.5 85.83 24.5 S 95.92 30.5 100 24.5 l 0 30 l -170 0"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </a>
+            <a class="navbar-name" id="navbar-name" href="/index.html"
+              >SCOTCH</a
+            >
+          </div>
+        </div>
+        <div class="nav-items" id="nav-items">
+          <ul>
+            <li>
+              <a href="/course.html"> Courses </a>
+            </li>
+            <li><a href="/tutorials.html">Tutorials</a></li>
+            <li><a href="/news.html">News</a></li>
+            <li><a href="/app.html">App Hosting</a></li>
+            <li>
+              <div class="dropdown">
+                <button class="dropbtn">...</button>
+                <div class="dropdown-content">
+                  <a class="item-child" href="/about.html">About</a>
+                  <a class="item-child" href="/app.html">Website Hosting</a>
+                  <a class="item-child" href="/glossary.html">JS Glossary</a>
+                  <a class="item-child" href="/challenge.html"
+                    >Code Challenges</a
+                  >
+                  <a class="item-child" href="#">Sponsor Scotch</a>
+                  <div class="item-child">
+                    <a
+                      href="https://twitter.com/scotch_io"
+                      style="margin-right: 15px; color: #209cee"
+                    >
+                      <svg
+                        class="svg-inline--fa fa-twitter fa-w-16 fa-fw has-text-info"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fab"
+                        data-icon="twitter"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                        ></path>
+                      </svg>
+                      <!-- <i class="fab fa-fw fa-twitter has-text-info"></i> -->
+                    </a>
+                    <a
+                      href="https://facebook.com/scotchdevelopment"
+                      style="margin-right: 15px; color: #3273dc"
+                    >
+                      <svg
+                        class="svg-inline--fa fa-facebook fa-w-16 fa-fw has-text-link"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fab"
+                        data-icon="facebook"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                        ></path>
+                      </svg>
+                      <!-- <i class="fab fa-fw fa-facebook has-text-link"></i> -->
+                    </a>
+                    <a
+                      href="https://facebook.com/scotchdevelopment"
+                      style="margin-right: 15px; color: #fff"
+                    >
+                      <svg
+                        class="svg-inline--fa fa-github-alt fa-w-15 fa-fw has-text-white"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fab"
+                        data-icon="github-alt"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 480 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"
+                        ></path>
+                      </svg>
+                      <!-- <i class="fab fa-fw fa-github-alt has-text-white"></i> -->
+                    </a>
+                    <a
+                      href="https://www.youtube.com/channel/UCLyOul64B-SwBpOd9f2Kfxw"
+                      style="color: #ff3860"
+                    >
+                      <svg
+                        class="svg-inline--fa fa-youtube fa-w-18 fa-fw has-text-danger"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fab"
+                        data-icon="youtube"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+                        ></path>
+                      </svg>
+                      <!-- <i class="fab fa-fw fa-youtube has-text-danger"></i> -->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" name="search" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <div class="btn-login">
+          <button class="sco-btnGray">LOGIN</button>
+        </div>
+        <div class="btn-signup">
+          <button class="sco-btnRed">
+            <strong>SIGN UP</strong>
+            <span><i class="far fa-hand-spock"></i></span>
+          </button>
+        </div>
+
+        <div class="menu-icon__dropdown" id="menu-icon__dropdown">
+          <ul>
+            <li><a href="/course.html">Courses</a></li>
+            <li><a href="/tutorials.html">Tutorials</a></li>
+            <li><a href="/news.html">News</a></li>
+            <li><a href="/app.html">App Hosting</a></li>
+          </ul>
+          <div class="menu-icon__footer">
+            <div class="search-container">
+              <form action="/action_page.php">
+                <input type="text" name="search" />
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+            <div class="btn-login">
+              <button class="sco-btnGray">LOGIN</button>
+            </div>
+            <div class="btn-signup">
+              <button class="sco-btnRed">
+                <strong>SIGN UP</strong>
+                <span><i class="far fa-hand-spock"></i></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+          <span class="fa fa-bars"></span>
+        </div>
+        <div class="cancel-icon" id="cancel-icon">
+          <span class="fas fa-times"></span>
+        </div>
+      </nav>
+    </header>
+
+    <section class="menu">
+      <div class="menu__content">
+        <nav>
+          <a class="menu__item color-react" href="/tag.html">#react</a>
+          <a class="menu__item color-vue" href="/tag.html">#vue</a>
+          <a class="menu__item color-angular" href="/tag.html">#angular</a>
+          <a class="menu__item color-javascript" href="/tag.html"
+            >#javascript</a
+          >
+          <a class="menu__item color-node" href="/tag.html">#node</a>
+          <a class="menu__item color-lavarel" href="/tag.html">#lavarel</a>
+          <a class="menu__item color-css" href="/tag.html">#css</a>
+          <a class="menu__item color-vs-code" href="/tag.html">#vs-code</a>
+          <a class="menu__item color-python" href="/tag.html">#python</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="challenges">
+      <div class="challenges__title">
+        <h1>Scotch.io Coding Challenges!</h1>
+        <p>Join us for monthly challenges to grow and expand your skills.</p>
+      </div>
+      <div class="challenges__content">
+        <p>Get the challenges and solutions straight to your inbox...</p>
+        <div class="challenges__search">
+          <input type="email" placeholder="Email" name="search" />
+          <!-- <div class="icon-email">
+                        📧
+                        </div> -->
+
+          <button class="getupdate" type="submit">GET UPDATES</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="work">
+      <div class="work__container">
+        <h2 class="title">How does it work?</h2>
+        <h3 class="subtitle">Join. Code. Learn.</h3>
+
+        <div class="work__content">
+          <div class="work__item">
+            <div class="work__card">
+              <img src="./img/fantasy (1).png" alt="" />
+
+              <div class="work__card__header">
+                <h3>Join the Community</h3>
+              </div>
+              <div class="work__card__info">
+                <ul>
+                  <li>Join the email list</li>
+                  <li>
+                    Follow <a href="">@scotch_io</a> and
+                    <a href="">@chrisoncode</a>.
+                  </li>
+                  <li>Join the <a href="">Spectrum community</a>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="work__item">
+            <div class="work__card">
+              <img src="./img/badger.png" alt="" />
+              <div class="work__card__header">
+                <h3>Do the Chanllenge</h3>
+              </div>
+              <div class="work__card__info">
+                <ul>
+                  <li>Check back here or get the announcement email.</li>
+                  <li>
+                    Try it out on
+                    <a href="">CodePen</a>
+                    or
+                    <a href="">CodeSandbox</a>.
+                  </li>
+                  <li>
+                    Post your solution in the comments or in our
+                    <a href="">Spectrum community</a>!
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="work__item">
+            <div class="work__card">
+              <img src="./img/dragon.png" alt="" />
+              <div class="work__card__header">
+                <h3>Join the Community</h3>
+              </div>
+              <div class="work__card__info">
+                <ul>
+                  <li>
+                    We'll be live streaming the solution on
+                    <a href="">Twitch</a>
+                    and
+                    <a href="">YouTube</a>.
+                  </li>
+                  <li>Videos will be posted on this page also.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="previous">
+      <div class="previous__title">
+        <h1>Previous Challenges</h1>
+      </div>
+      <div class="previous__content">
+        <div class="previous__item">
+          <div class="previous__card">
+            <div class="previous__card__header">
+              <h4>Challenge #14</h4>
+              <h3><a href="">Test Your Knowledge of React Hooks</a></h3>
+            </div>
+            <div class="previous__card__footer">
+              <a class="view" href=""> View Challenge</a>
+              <a class="solutions" href=""> View Solution</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="previous__item">
+          <div class="previous__card">
+            <div class="previous__card__header">
+              <h4>Challenge #13</h4>
+              <h3><a href="">Going From ES5 to ES6</a></h3>
+            </div>
+            <div class="previous__card__footer">
+              <a class="view" href=""> View Challenge</a>
+              <a class="solutions" href=""> View Solution</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="previous__item">
+          <div class="previous__card">
+            <div class="previous__card__header">
+              <h4>Challenge #12</h4>
+              <h3><a href="">JavaScript String Manipulation</a></h3>
+            </div>
+            <div class="previous__card__footer">
+              <a class="view" href=""> View Challenge</a>
+              <a class="solutions" href=""> View Solution</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="previous__item">
+          <div class="previous__card">
+            <div class="previous__card__header">
+              <h4>Challenge #11</h4>
+              <h3><a href="">JavaScript Functional Programming</a></h3>
+            </div>
+            <div class="previous__card__footer">
+              <a class="view" href=""> View Challenge</a>
+              <a class="solutions" href=""> View Solution</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="previous__item">
+          <div class="previous__card">
+            <div class="previous__card__header">
+              <h4>Challenge #10</h4>
+              <h3><a href="">Lazy Loading Animal Memes</a></h3>
+            </div>
+            <div class="previous__card__footer">
+              <a class="view" href=""> View Challenge</a>
+              <a class="solutions" href=""> View Solution</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="previous__item">
+          <div class="previous__card">
+            <div class="previous__card__header">
+              <h4>Challenge #9</h4>
+              <h3><a href="">Build A Scroll-Spy Navbar</a></h3>
+            </div>
+            <div class="previous__card__footer">
+              <a class="view" href=""> View Challenge</a>
+              <a class="solutions" href=""> View Solution</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="previous__item">
+          <div class="previous__card">
+            <div class="previous__card__header">
+              <h4>Challenge #8</h4>
+              <h3><a href="">Build An Animated Image Search</a></h3>
+            </div>
+            <div class="previous__card__footer">
+              <a class="view" href=""> View Challenge</a>
+              <a class="solutions" href=""> View Solution</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="previous__item">
+          <div class="previous__card">
+            <div class="previous__card__header">
+              <h4>Challenge #7</h4>
+              <h3><a href="">Build An Avengers Off Canvas Sidebar</a></h3>
+            </div>
+            <div class="previous__card__footer">
+              <a class="view" href=""> View Challenge</a>
+              <a class="solutions" href=""> View Solution</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="previous__item">
+          <div class="previous__card">
+            <div class="previous__card__header">
+              <h4>Challenge #6</h4>
+              <h3><a href="">Build A Pomodoro Timer</a></h3>
+            </div>
+            <div class="previous__card__footer">
+              <a class="view" href=""> View Challenge</a>
+              <a class="solutions" href=""> View Solution</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="previous__item">
+          <div class="previous__card">
+            <div class="previous__card__header">
+              <h4>Challenge #5</h4>
+              <h3><a href="">Build A Movie Player</a></h3>
+            </div>
+            <div class="previous__card__footer">
+              <a class="view" href=""> View Challenge</a>
+              <a class="solutions" href=""> View Solution</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="previous__item">
+          <div class="previous__card">
+            <div class="previous__card__header">
+              <h4>Challenge #4</h4>
+              <h3>
+                <a href="">Build An Eye-Tracking Alien with JavaScript</a>
+              </h3>
+            </div>
+            <div class="previous__card__footer">
+              <a class="view" href=""> View Challenge</a>
+              <a class="solutions" href=""> View Solution</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="previous__item">
+          <div class="previous__card">
+            <div class="previous__card__header">
+              <h4>Challenge #3</h4>
+              <h3><a href="">CSS Lightsaber Checkbox</a></h3>
+            </div>
+            <div class="previous__card__footer">
+              <a class="view" href=""> View Challenge</a>
+              <a class="solutions" href=""> View Solution</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="previous__item">
+          <div class="previous__card">
+            <div class="previous__card__header">
+              <h4>Challenge #2</h4>
+              <h3><a href="">Build a Calculator with CSS Grid</a></h3>
+            </div>
+            <div class="previous__card__footer">
+              <a class="view" href=""> View Challenge</a>
+              <a class="solutions" href=""> View Solution</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="previous__item">
+          <div class="previous__card">
+            <div class="previous__card__header">
+              <h4>Challenge #1</h4>
+              <h3><a href="">CSS Jiggly Button</a></h3>
+            </div>
+            <div class="previous__card__footer">
+              <a class="view" href=""> View Challenge</a>
+              <a class="solutions" href=""> View Solution</a>
+            </div>
+          </div>
+        </div>
+        <div class="previous__item">
+          <div class="previous__card">
+            <div class="previous__card__header">
+              <h4>Challenge #14</h4>
+              <h3><a href="">Test Your Knowledge of React Hooks</a></h3>
+            </div>
+            <div class="previous__card__footer">
+              <a class="view" href=""> View Challenge</a>
+              <a class="solutions" href=""> View Solution</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      var logo = document.querySelector(".scotch-logo");
+
+      logo.addEventListener("mouseenter", function () {
+        logo.classList.add("scotch-logo--active");
+      });
+
+      logo.addEventListener("mouseleave", function () {
+        logo.classList.remove("scotch-logo--active");
+      });
+      function animateLogo() {
+        logo.classList.add("scotch-logo--active");
+        setTimeout(function () {
+          logo.classList.remove("scotch-logo--active");
+        }, 4500);
+      }
+
+      window.addEventListener("scroll", function () {
+        animateLogo();
+      });
+      window.addEventListener("load", function () {
+        animateLogo();
+      });
+    </script>
+
+    <!-- ---------------------------------------------------------- -->
+    <script>
+      document
+        .getElementById("menu-icon")
+        .addEventListener("click", function (event) {
+          let show = document.getElementById("menu-icon__dropdown");
+          show.style.height = "auto";
+          show.style.display = "block";
+          let btn = document.getElementById("cancel-icon");
+          btn.style.display = "flex";
+          btn.style.alignItems = "center";
+          document.getElementById("menu-icon").style.display = "none";
+        });
+      document
+        .getElementById("cancel-icon")
+        .addEventListener("click", function (event) {
+          let show = document.getElementById("menu-icon__dropdown");
+          show.style.height = "0";
+          show.style.display = "none";
+          let btn = document.getElementById("menu-icon");
+          btn.style.display = "flex";
+          btn.style.alignItems = "center";
+          document.getElementById("cancel-icon").style.display = "none";
+        });
+    </script>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        if (pageYOffset === 0) {
+          let logo = document.getElementById("navbar-name");
+
+          logo.style.transform = "translateX(0)";
+          logo.style.width = "inherit";
+          document.getElementById("nav-items").style.paddingLeft = "185px";
+        } else {
+          let logoChange = document.getElementById("navbar-name");
+
+          logoChange.style.transform = "translateX(-65%)";
+          logoChange.style.width = "50%";
+          document.getElementById("nav-items").style.paddingLeft = "85px";
+        }
+      });
+    </script>
+  </body>
+</html>

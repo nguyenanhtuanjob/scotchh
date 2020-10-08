@@ -1,0 +1,83 @@
+.challenges {
+  width: 100%;
+  margin: 0 auto;
+  background-image: url("../../img/backgourndchallenge.jpg");
+  background-position: center center;
+  background-size: cover;
+
+  margin-top: 100px;
+  padding: 45px 0;
+  .challenges__title {
+    margin: 0 auto;
+
+    max-width: 1152px;
+    width: 1152px;
+    padding-bottom: 40px;
+    h1 {
+      @include styleText($color-white-2, 2.5rem, $fw-5);
+    }
+    p {
+      @include styleText($color-white-2, 18.75px, $fw-0);
+    }
+  }
+  .challenges__content {
+    margin: 0 auto;
+
+    max-width: 1152px;
+    width: 1152px;
+    p {
+      @include styleText($color-white-2, 18.75px, $fw-0);
+    }
+    .challenges__search {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      margin: 0 auto;
+      input[type="email"] {
+        width: 80%;
+        padding: 15px 25px;
+        margin-top: 5px 0;
+        font-size: 17px;
+        outline: none;
+        border: none;
+        color: $color-white-1;
+        background-color: $color-white-0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        @include styleText($color-gray-1, $fs-3 + 1, $fw-0);
+        transition: all 0.3s;
+      }
+      button {
+        float: right;
+        padding: 12px;
+        margin-top: 5px 0;
+        font-size: 17px;
+        border: none;
+        background-color: $color-black-6;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: $color-blue-3;
+        @include styleText($color-white-0, 22px, $fw-0);
+        white-space: nowrap;
+      }
+    }
+  }
+}
+@include responsive("extra-large") {
+  .challenges {
+    .challenges__title,
+    .challenges__content {
+      max-width: 960px;
+      width: 960px;
+    }
+  }
+}
+
+@include responsive("large") {
+  .challenges {
+    .challenges__title,
+    .challenges__content {
+      width: 90%;
+    }
+  }
+}

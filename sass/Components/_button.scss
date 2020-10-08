@@ -1,0 +1,61 @@
+.sco-btnGray {
+  @include styleButton(
+    $color-black-6,
+    $color-black-6,
+    $pd-2 + 2,
+    $pd-1,
+    $border-radius
+  );
+  // @include styleText($color-white-0, $fs-1, $fw-5);
+  //----------------------------------------------
+  @include styleText($color-white-0, $fs-1, $fw-4);
+  border-radius: 3px;
+  padding: 14px;
+  height: 100%;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  &:hover {
+    @include styleButtonHover($color-white-0, $color-black-10, $color-black-10);
+  }
+}
+
+.sco-btnRed {
+  transition: all 0.5s;
+  @include styleButton(
+    $color-black-8,
+    $color-pink-0,
+    $pd-2 + 2,
+    $pd-1,
+    $border-radius
+  );
+  // @include styleText($color-white-0, $fs-1, $fw-5);
+  //---------------------------------------------------
+  @include styleText($color-white-0, $fs-1, $fw-4);
+  border-radius: 3px;
+  padding: 14px;
+  height: 100%;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  &:hover {
+    @include styleButtonHover($color-white-0, $color-pink-0, $color-black-10);
+  }
+}
+
+.sco-btnBlue {
+  @include styleButton($color-white-0, $color-white-0, $pd-2, $pd-1, 0);
+  // @include styleText($color-blue-1, $fs-1, $fw-5);
+  // border-bottom: 1px solid $color-blue-1;
+  //----------------------
+  @include styleText($color-black-3, $fs-3 + 2px, $fw-4);
+  border-bottom: 1px solid $color-black-3;
+  padding: 10px 0;
+  &:focus {
+    outline: none;
+  }
+}

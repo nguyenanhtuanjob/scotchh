@@ -1,0 +1,32 @@
+.about {
+  width: 100%;
+
+  margin-top: 100px;
+  .about__title {
+    text-align: center;
+    background-color: $color-black-6;
+    padding: 100px 0;
+    h1 {
+      @include styleText($color-white-2, $fs-7 + 2, $fw-5);
+    }
+    p {
+      @include styleText($color-white-2, $fs-3, $fw-normal);
+    }
+  }
+  .about__content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+    .about__text {
+      @include styleText($color-black-3, 22px, $fw-normal);
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+@include responsive("large") {
+  .about {
+    margin-top: 40px;
+  }
+}

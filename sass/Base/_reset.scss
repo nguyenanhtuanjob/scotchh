@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Nunito", sans-serif;
+  line-height: $line-height-0;
+  @include styleText($color-black-3, $fs-body, $fw-4);
+}
+
+//---------------------------
+ul li {
+  margin: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}

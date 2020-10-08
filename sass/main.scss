@@ -1,0 +1,38 @@
+//Helper
+@import "./Helper/variables";
+@import "./Helper/mixin";
+
+//Base
+@import "./Base/reset";
+
+@import "./Base/customize";
+
+//Component
+@import "./Components/button";
+
+//Layout
+@import "./Layouts/header";
+@import "./Layouts/webinar";
+@import "./Layouts/menu";
+@import "./Layouts/welcom";
+@import "./Layouts/start";
+@import "./Layouts/feedback";
+@import "./Layouts//footer";
+@import "./Layouts/banner";
+@import "./Layouts/courses";
+@import "./Layouts/tutorials";
+@import "./Layouts/appbanner";
+@import "./Layouts/appwebinar";
+@import "./Layouts/cloud";
+@import "./Layouts/deploy";
+@import "./Layouts/fast";
+@import "./Layouts/run";
+@import "./Layouts/unlimited";
+@import "./Layouts/learning";
+@import "./Layouts/about";
+@import "./Layouts/stuff";
+@import "./Layouts/array";
+@import "./Layouts/challenges";
+@import "./Layouts/work";
+@import "./Layouts/previous";
+// @import "./Layouts/details";

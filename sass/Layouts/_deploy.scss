@@ -1,0 +1,50 @@
+.deploy {
+  width: 100%;
+  margin: 40px auto;
+  .deploy__content {
+    width: 60%;
+    margin: 0 auto;
+    .deploy__title {
+      h2 {
+        @include styleText($color-black-14, $fs-6 + 4, $fw-5);
+        position: relative;
+        &::before {
+          display: block;
+          content: "";
+          background-image: url(../../img/blob-shape-small.svg);
+          background-repeat: no-repeat;
+          height: 100px;
+          width: 100px;
+          opacity: 0.25;
+          position: absolute;
+          left: -60px;
+          top: -31px;
+        }
+      }
+    }
+    .deploy__info {
+      @include styleText($color-black-14, $fs-3 + 1, $fw-normal);
+      a {
+        text-decoration: none;
+        color: $color-blue-2;
+        &:hover {
+          background-color: $color-blue-4;
+          color: $color-black-14;
+        }
+      }
+    }
+  }
+}
+@include responsive("mid2-medium") {
+  .deploy {
+    .deploy__content {
+      width: 90%;
+      margin: 0 auto;
+      .deploy__title {
+        h2 {
+          font-size: 1.875rem;
+        }
+      }
+    }
+  }
+}

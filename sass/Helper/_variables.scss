@@ -1,0 +1,97 @@
+// variable color
+$color-white-0: #ffffff;
+$color-white-1: #d9d9d9;
+$color-white-2: #f5f5f5;
+$color-white-3: #eee;
+$color-black-0: #000000;
+$color-black-1: #333;
+$color-black-3: #4a4a4a;
+$color-black-4: #313131;
+$color-black-5: #111;
+$color-black-6: #363636;
+$color-black-8: #1f1f1f;
+$color-black-10: #2f2f2f;
+$color-black-11: #363636e6;
+$color-black-12: #393939;
+$color-black-13: rgba(0, 0, 0, 0.8);
+$color-black-14: #121212;
+$color-black-15: #434343;
+$color-gray-0: #999;
+$color-gray-1: #777777;
+$color-gray-2: #aaa;
+$color-gray-3: #d5d5d5;
+$color-gray-4: rgba(0, 0, 0, 0.5);
+$color-gray-5: rgba(0, 0, 0, 0.6);
+$color-gray-6: rgba(0, 0, 0, 0.8);
+$color-gray-7: #444444;
+$color-gray-8: #7a7a7a;
+$color-gray-9: #aaaaaa;
+
+$color-purple-0: #8c54a4;
+$color-blue-0: #5685fd;
+$color-blue-1: #286ee7;
+$color-blue-2: #3273dc;
+$color-blue-3: #209cee;
+$color-blue-4: #7db4fc;
+$color-blue-5: #61dafb;
+$color-green-0: #41b883;
+$color-green-1: #38b2ac;
+$color-green-2: #00d1b2;
+$color-brown-0: #665213;
+$color-brown-1: #4b401a;
+$color-pink-0: #ff3860;
+$color-pink-1: #9f7aea;
+
+$color-red-0: #ff4241;
+$color-red-1: #c82333;
+$color-yellow-0: #e5d0ad;
+$color-yellow-1: #fcd857;
+
+$color-menu-0: #00d8ff;
+$color-menu-1: #49d091;
+$color-menu-2: #e03237;
+$color-menu-3: #bcac29;
+$color-menu-4: #33a956;
+$color-menu-5: #ff8682;
+$color-menu-6: #2ca9e1;
+$color-menu-7: #a5d8fa;
+$color-menu-8: #fdd22d;
+
+// font-size
+$fs-body: 15px;
+$fs-0: 12px;
+$fs-1: 13px;
+$fs-2: 14px;
+$fs-3: 16px;
+$fs-5: 35px;
+$fs-6: 36px;
+$fs-7: 46px;
+//font-weight
+$fw-normal: normal;
+$fw-0: 300;
+$fw-1: 500;
+$fw-2: 600;
+$fw-4: 400;
+$fw-5: 700;
+//variable padding
+$pd-0: 5px;
+$pd-1: 10px;
+$pd-2: 15px;
+$pd-3: 20px;
+$pd-4: 25px;
+
+//variable margin
+
+$border-radius: 5px;
+//variable line-height
+$line-height-0: 1.62;
+//break points
+$breakpoints: (
+  // "extra-large": 1472px,
+  "extra-large": 1280px,
+  "large": 1088px,
+  "medium": 1024px,
+  "mid2-medium": 768px,
+  "mid-medium": 678px,
+  "small": 576px
+);

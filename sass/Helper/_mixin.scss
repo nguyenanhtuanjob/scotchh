@@ -1,0 +1,35 @@
+@mixin styleText($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+@mixin styleBorder($color) {
+    border: 1px solid $color;
+}
+@mixin styleButton($bg-color,$border-color,$pd-y,$pd-x,$bd-radius){
+    background-color:$bg-color;
+    border: 1px solid $border-color;
+    padding:$pd-y $pd-x;
+    border-radius:$bd-radius;
+}
+@mixin styleButtonHover($color,$bg-color,$border-color) {
+    color: $color;
+    background-color:$bg-color;
+    border-color:$border-color;
+}
+@mixin responsive($screen) {
+    //kiểm tra screen có tồn tại trong breakpoint hay không
+    @if (map-has-key($map: $breakpoints, $key: $screen)) {
+        //Nếu tìm tháy
+        //Lấy giá trị của screen gán vào cho biến value
+        $value: map-get(
+            $map: $breakpoints,
+            $key: $screen,
+        );
+        @media screen and (max-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn 'Screen khong ton tai';
+    }
+}

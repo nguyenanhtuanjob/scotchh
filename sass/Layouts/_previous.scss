@@ -1,0 +1,94 @@
+.previous {
+  margin: 0 auto;
+  width: 100%;
+  background-image: linear-gradient(141deg, #dfd8d9, #f5f5f5 71%, #fff);
+  .previous__title {
+    h1 {
+      text-align: center;
+      @include styleText($color-black-6, $fs-6 + 4, $fw-5);
+    }
+  }
+  .previous__content {
+    padding: 20px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1152px;
+    width: 1152px;
+    .previous__item {
+      text-align: center;
+      width: 32%;
+      margin: 10px 0;
+      .previous__card {
+        padding: 30px;
+        border-radius: 10px;
+        background-color: $color-white-0;
+        box-shadow: 0 2px 3px hsla(0, 0%, 4%, 0.1),
+          0 0 0 1px hsla(0, 0%, 4%, 0.1);
+        .previous__card__header {
+          padding-bottom: 20px;
+          h4 {
+            @include styleText($color-gray-8, 11.25px, $fw-normal);
+          }
+          h3 {
+            a {
+              text-decoration: none;
+              @include styleText($color-black-6, 15px, $fw-5);
+            }
+          }
+        }
+        .previous__card__footer {
+          display: flex;
+          justify-content: center;
+          //-----------------------------
+          flex-wrap: wrap;
+          .view {
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: $color-blue-3;
+            padding: 5px 10px;
+            @include styleText($color-white-0, 11.25px, $fw-normal);
+          }
+          .solutions {
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: $color-green-2;
+            padding: 5px 10px;
+            @include styleText($color-white-0, 11.25px, $fw-normal);
+          }
+        }
+      }
+    }
+  }
+}
+@include responsive("extra-large") {
+  .previous {
+    .previous__content {
+      max-width: 960px;
+      width: 960px;
+    }
+  }
+}
+@include responsive("large") {
+  .previous {
+    .previous__content {
+      width: 100%;
+    }
+  }
+}
+@include responsive("mid2-medium") {
+  .previous {
+    .previous__content {
+      width: 100%;
+      margin: 0 auto;
+      .previous__item {
+        width: 90%;
+        margin: 10px auto;
+      }
+    }
+  }
+}

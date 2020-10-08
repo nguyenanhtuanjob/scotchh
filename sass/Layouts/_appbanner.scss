@@ -1,0 +1,58 @@
+.appbanner {
+  background-image: url(../../img/appbanner1.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 120px;
+  margin-top: 40px;
+  &__content {
+    width: 60%;
+    margin: 0 auto;
+    padding: 50px 0;
+    .appbanner__title {
+      @include styleText($color-white-0, $fs-7, $fw-5);
+      margin-bottom: 15px;
+    }
+    .appbanner__text {
+      @include styleText($color-white-0, 24px, $fw-0);
+      a {
+        color: $color-white-0;
+        text-decoration: underline;
+      }
+      margin-bottom: 30px;
+    }
+    .getapp {
+      margin-top: 30px;
+      padding: 30px 40px;
+      text-transform: uppercase;
+      @include styleText($color-white-0, 24px, $fw-5);
+    }
+  }
+}
+@include responsive("large") {
+  .appbanner {
+    margin-top: 0;
+  }
+}
+@include responsive("mid2-medium") {
+  .appbanner {
+    &__content {
+      width: 90%;
+    }
+  }
+}
+@include responsive("small") {
+  .appbanner {
+    &__content {
+      width: 90%;
+      .getapp {
+        margin-top: 30px;
+        padding: 20px 30px;
+        text-transform: uppercase;
+        @include styleText($color-white-0, 20px, $fw-5);
+      }
+    }
+  }
+}
